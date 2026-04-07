@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Sleeping Blanket — Glownest</title>
+  <meta name="description" content="সোনামণির আরামদায়ক ঘুমের জন্য প্রিমিয়াম বেবি স্লিপিং ব্ল্যাঙ্কেট। ১০০% কটন, সফট ও নিরাপদ।">
+  <meta name="theme-color" content="#FF6B9D">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       CORE VARIABLES
+       ========================================= */
+    :root {
+      --primary: #FF6B9D; --primary-dark: #E84578; --primary-light: #FFF0F5;
+      --text-main: #0F172A; --text-muted: #64748B;
+      --bg-body: #FFFFFF; --bg-section: #F8FAFC;
+      --border: #E2E8F0;
+      --shadow-soft: 0 10px 40px -10px rgba(255, 107, 157, 0.15);
+      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --radius: 16px;
+      --font-bn: 'Hind Siliguri', sans-serif; --font-en: 'Poppins', sans-serif;
+    }
+
+    /* =========================================
+       RESET & BASE
+       ========================================= */
+    *, *:before, *:after { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { margin: 0; font-family: var(--font-bn); background: var(--bg-body); color: var(--text-main); line-height: 1.6; overflow-x: hidden; text-rendering: optimizeLegibility; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 12px; }
+    a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
+    input, button { font-family: inherit; }
+    
+    /* Layout Utility */
+    .container { max-width: 620px; margin: 0 auto; padding: 0 16px; position: relative; }
+    .hidden { display: none; }
+
+    /* Performance Utility */
+    .lazy-section { content-visibility: auto; contain-intrinsic-size: 600px; }
+
+    /* =========================================
+       TYPOGRAPHY & DECORATION
+       ========================================= */
+    .sec-head { text-align: center; margin-bottom: 30px; }
+    .sec-title { font-size: 1.75rem; font-weight: 700; color: #1e293b; margin: 0; letter-spacing: -0.5px; }
+    .sec-title span { color: var(--primary); }
+    
+    /* Modern Glowing Divider */
+    .divider { 
+      height: 4px; width: 60px; margin: 10px auto 0; border-radius: 10px; 
+      background: linear-gradient(90deg, var(--primary), #FFC4D6); 
+      box-shadow: 0 2px 10px rgba(255, 107, 157, 0.4);
+    }
+
+    /* =========================================
+       COMPONENTS
+       ========================================= */
+    /* Header */
+    .header {
+      position: sticky; top: 0; z-index: 999;
+      background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05); padding: 10px 0;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 8px; }
+    .logo-box { 
+      width: 36px; height: 36px; background: var(--primary); color: white; 
+      border-radius: 10px; display: grid; place-items: center; 
+      font-weight: 700; font-family: var(--font-en); font-size: 20px; 
+    }
+    .logo-text { font-size: 1.25rem; font-weight: 700; font-family: var(--font-en); line-height: 1; }
+    .sale-badge { 
+      background: #FFF1F2; color: #BE123C; padding: 5px 12px; border-radius: 20px; 
+      font-weight: 700; font-size: 0.75rem; border: 1px solid #FECDD3; 
+    }
+
+    /* Buttons */
+    .btn-main {
+      display: flex; justify-content: center; align-items: center; gap: 10px;
+      width: 100%; background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white; padding: 18px; border-radius: 14px;
+      font-size: 1.2rem; font-weight: 700; border: none; cursor: pointer;
+      box-shadow: 0 10px 25px -5px rgba(255, 107, 157, 0.5);
+      position: relative; overflow: hidden; transition: transform 0.1s; will-change: transform;
+    }
+    .btn-main:active { transform: scale(0.98); }
+    .btn-main::after {
+      content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+      transform: skewX(-25deg); animation: shimmer 3s infinite;
+    }
+
+    /* Animations */
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(0.98); opacity: 0.9; } 100% { transform: scale(1); } }
+    @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-6px); } 100% { transform: translateY(0px); } }
+    @keyframes shimmer { 0% { left: -100%; } 100% { left: 200%; } }
+
+    /* =========================================
+       HERO SECTION
+       ========================================= */
+    .hero { padding: 40px 0 60px; text-align: center; background: radial-gradient(circle at top, #FFF5F7, #fff 60%); }
+    .top-tag { 
+      display: inline-block; background: white; color: var(--primary); 
+      padding: 6px 16px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; 
+      margin-bottom: 15px; box-shadow: var(--shadow-card); border: 1px solid #FFE4E6; 
+    }
+    /* Fixed line breaks by using proper display properties instead of <br> */
+    .hero h1 { font-size: 2.2rem; line-height: 1.3; margin: 0 0 15px; color: #1E293B; letter-spacing: -0.5px; }
+    .hero h1 span { display: block; color: var(--primary); margin-top: 5px; }
+    .hero-desc { color: var(--text-muted); margin-bottom: 30px; font-size: 1.1rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    
+    .hero-img-wrap { 
+      position: relative; border-radius: 24px; margin-bottom: 40px; 
+      display: inline-block; overflow: hidden; box-shadow: var(--shadow-soft);
+      border: 4px solid white; animation: float 6s ease-in-out infinite; will-change: transform;
+    }
+    .discount-sticker { 
+      position: absolute; top: 15px; left: 15px; background: #FFD700; color: #B91C1C; 
+      font-weight: 800; padding: 8px 14px; border-radius: 12px; font-size: 0.9rem; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); transform: rotate(-5deg); z-index: 10;
+    }
+    .price-sticker {
+      position: absolute; bottom: 15px; right: 15px;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      padding: 8px 16px; border-radius: 14px; text-align: right;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #FFF0F5;
+    }
+    .p-old { text-decoration: line-through; color: #94A3B8; font-size: 0.85rem; font-family: var(--font-en); display: block; line-height: 1; }
+    .p-new { color: var(--primary); font-size: 1.4rem; font-weight: 700; font-family: var(--font-en); line-height: 1; }
+
+    /* Features */
+    .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
+    .feat-card {
+      background: #fff; padding: 20px 10px; border-radius: 18px;
+      text-align: center; border: 1px solid var(--border);
+      box-shadow: var(--shadow-card); transition: transform 0.2s;
+    }
+    .feat-card:hover { transform: translateY(-3px); border-color: var(--primary); }
+    .feat-icon { 
+      width: 42px; height: 42px; background: var(--primary-light); 
+      border-radius: 50%; margin: 0 auto 10px; display: grid; place-items: center; color: var(--primary);
+    }
+    /* Natural line break logic instead of <br> */
+    .feat-title { font-size: 0.85rem; font-weight: 700; color: #333; line-height: 1.4; word-wrap: break-word; }
+
+    /* =========================================
+       GALLERY
+       ========================================= */
+    .gallery-sec { padding: 50px 0; background: #fff; }
+    .gallery-track { 
+      display: flex; gap: 16px; overflow-x: auto; padding: 10px 16px 25px; 
+      scroll-snap-type: x mandatory; scrollbar-width: none; cursor: grab;
+    }
+    .gallery-track::-webkit-scrollbar { display: none; }
+    
+    .g-card { 
+      flex: 0 0 85vw; max-width: 300px; height: 220px; 
+      border-radius: 16px; overflow: hidden; scroll-snap-align: center; 
+      position: relative; box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-bottom: 4px solid var(--primary);
+    }
+    .g-card img { width: 100%; height: 100%; object-fit: cover; }
+    .g-badge { 
+      position: absolute; bottom: 10px; left: 10px; 
+      background: rgba(255,255,255,0.95); padding: 5px 12px; 
+      border-radius: 20px; font-size: 0.75rem; font-weight: 700; color: #333; 
+      backdrop-filter: blur(4px); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* =========================================
+       ORDER FORM
+       ========================================= */
+    .form-sec { padding: 50px 0; background: var(--bg-section); }
+    .form-card {
+      background: #fff; padding: 30px 20px; border-radius: 24px;
+      box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border: 1px solid #fff;
+    }
+    
+    .timer { 
+      background: #FFF0F1; color: #E11D48; border: 1px dashed #FECDD3;
+      padding: 10px; border-radius: 12px; text-align: center; font-weight: 700; 
+      margin-bottom: 25px; font-size: 0.95rem; animation: pulse 2s infinite; will-change: transform;
+    }
+
+    .inp-grp { margin-bottom: 18px; }
+    .lbl { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem; color: #333; }
+    .inp {
+      width: 100%; padding: 14px; border-radius: 12px;
+      border: 1px solid #E2E8F0; background: #fff;
+      font-size: 1rem; transition: border-color 0.2s; color: #333;
+    }
+    .inp:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(255,107,157,0.1); }
+
+    /* Color Selection */
+    .color-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
+    .c-opt {
+      border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px 5px;
+      text-align: center; cursor: pointer; transition: 0.2s; position: relative; background: white;
+    }
+    .c-opt:has(input:checked) { border-color: var(--primary); background: #FFF0F5; box-shadow: 0 4px 10px rgba(255,107,157,0.15); transform: translateY(-2px); }
+    .c-dot { width: 22px; height: 22px; border-radius: 50%; display: block; margin: 0 auto 6px; box-shadow: inset 0 0 0 3px white, 0 4px 8px rgba(0,0,0,0.15); }
+    .c-name { font-size: 0.8rem; font-weight: 600; display: block; }
+    .c-opt input { position: absolute; opacity: 0; }
+
+    /* Preview */
+    .preview-box {
+      margin-top: 15px; background: white; padding: 8px; 
+      border-radius: 12px; border: 1px solid #FFD6E8; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .preview-box img { height: 200px; width: 100%; object-fit: cover; border-radius: 8px; transition: opacity 0.3s; }
+
+    /* Shipping */
+    .ship-wrapper { display: flex; gap: 12px; margin-top: 10px; }
+    .ship-card {
+      flex: 1; border: 2px solid #F1F5F9; border-radius: 14px; padding: 12px;
+      cursor: pointer; transition: 0.2s; position: relative; background: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .ship-card:has(input:checked) {
+      border-color: var(--primary); background: #FFF5F7;
+      box-shadow: 0 4px 12px rgba(255,107,157,0.15);
+    }
+    .ship-card input { position: absolute; opacity: 0; }
+    .ship-icon { font-size: 1.5rem; margin-bottom: 4px; }
+    .ship-title { font-weight: 600; font-size: 0.9rem; color: #333; }
+    .ship-price { font-weight: 700; color: var(--primary); font-family: var(--font-en); font-size: 1.1rem; }
+
+    /* Summary */
+    .bill-area {
+      background: #F8FAFC; padding: 20px; border-radius: 16px; margin: 25px 0;
+      border: 1px dashed #CBD5E1;
+    }
+    .bill-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: #475569; }
+    .bill-item.total {
+      margin-top: 15px; padding-top: 15px; border-top: 2px dashed #E2E8F0;
+      color: #1E293B; align-items: center;
+    }
+    .total-label { font-weight: 700; font-size: 1.1rem; }
+    .total-amount { font-weight: 800; font-size: 1.5rem; color: var(--primary); font-family: var(--font-en); }
+
+    .trust-badges { text-align: center; margin-top: 15px; font-size: 0.8rem; color: #94A3B8; display: flex; justify-content: center; gap: 15px; }
+
+    /* =========================================
+       REVIEWS & FAQ
+       ========================================= */
+    .rev-track {
+      display: flex; gap: 15px; overflow-x: auto; padding: 10px 16px 30px;
+      scroll-snap-type: x mandatory; scrollbar-width: none;
+    }
+    .rev-track::-webkit-scrollbar { display: none; }
+    .rev-card {
+      flex: 0 0 280px; scroll-snap-align: center;
+      background: #FFF9FB; border: 1px solid #FFE4E6; border-radius: 16px;
+      padding: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+      border-bottom: 3px solid var(--primary);
+    }
+    .u-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .u-ava { width: 38px; height: 38px; background: #E0E7FF; color: #4338CA; border-radius: 50%; display: grid; place-items: center; font-weight: bold; }
+    
+    .faq-sec { padding: 50px 0; background: var(--bg-section); }
+    details {
+      background: #fff; border: 1px solid #FFE4E6; border-radius: 14px; margin-bottom: 10px;
+      overflow: hidden; transition: all 0.3s;
+    }
+    details[open] { border-color: #FFD6E8; box-shadow: 0 8px 20px rgba(255, 107, 157, 0.1); border-bottom: 3px solid var(--primary); }
+    summary {
+      padding: 16px; cursor: pointer; font-weight: 600; color: #333;
+      display: flex; justify-content: space-between; align-items: center; list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 1.5rem; color: var(--text-muted); font-weight: 300; transition: 0.3s; }
+    details[open] summary::after { transform: rotate(45deg); color: var(--primary); }
+    .ans { padding: 0 16px 16px; color: #555; font-size: 0.95rem; line-height: 1.6; border-top: 1px dashed #FFE4E6; padding-top: 12px; }
+
+    /* =========================================
+       MODERN FOOTER
+       ========================================= */
+    .footer { 
+      background: #0F172A; color: #CBD5E1; padding: 50px 0 20px; 
+      margin-top: 40px; border-top: 4px solid var(--primary); font-size: 0.9rem; 
+    }
+    
+    .f-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 30px; text-align: center;
+    }
+    @media (min-width: 600px) { .f-grid { text-align: left; } }
+
+    .f-brand { font-size: 1.8rem; font-weight: 700; color: white; font-family: var(--font-en); margin-bottom: 10px; display: block; }
+    .f-tag { font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px; display: block; }
+    
+    .f-title { color: white; font-weight: 700; margin-bottom: 15px; font-size: 1.1rem; }
+    .f-links { list-style: none; padding: 0; margin: 0; }
+    .f-links li { margin-bottom: 10px; }
+    .f-links a { color: #94A3B8; transition: 0.3s; display: inline-block; }
+    .f-links a:hover { color: var(--primary); transform: translateX(5px); }
+
+    .social-row { display: flex; justify-content: center; gap: 12px; margin-top: 10px; }
+    @media (min-width: 600px) { .social-row { justify-content: flex-start; } }
+    
+    .s-btn { 
+      width: 40px; height: 40px; background: rgba(255,255,255,0.08); 
+      border-radius: 10px; display: grid; place-items: center; color: white; 
+      transition: 0.3s; border: 1px solid rgba(255,255,255,0.1);
+    }
+    .s-btn:hover { background: var(--primary); transform: translateY(-4px); border-color: var(--primary); }
+    .s-btn.wa:hover { background: #25D366; border-color: #25D366; }
+
+    .copy { 
+      border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; 
+      font-size: 0.85rem; margin-top: 40px; text-align: center; color: #64748B;
+    }
+    .dev-credit { color: var(--primary); font-weight: 700; text-decoration: none; }
+
+    .err-msg { color: #E11D48; font-size: 0.85rem; display: none; margin-top: 5px; }
+    .has-err { border-color: #E11D48 !important; background: #FFF5F5 !important; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo-box">G</div>
+        <div class="logo-text">Glownest</div>
+      </div>
+      <div class="sale-badge">❄️ Winter Sale</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="top-tag">⭐ বেস্টসেলার উইন্টার গিয়ার</div>
+        <h1>শীতে সোনামণির জন্য <span>মায়ের কোলের উষ্ণতা</span></h1>
+        <p class="hero-desc">শীতের রাতে বাচ্চার বার বার ঘুম ভেঙে যায়? আমাদের প্রিমিয়াম কটন ব্ল্যাঙ্কেট নিশ্চিত করবে প্রশান্তির ঘুম।</p>
+        
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Sleeping Blanket" width="600" height="500" loading="eager">
+          <div class="discount-sticker">-২৭% ছাড়</div>
+          <div class="price-sticker">
+            <span class="p-old">৳৫৫০</span>
+            <span class="p-new">৳৩৯৯</span>
+          </div>
+        </div>
+
+        <a href="#orderForm" class="btn-main">
+          অর্ডার করুন <span style="font-size:1.4rem; margin-left:8px">➔</span>
+        </a>
+
+        <div class="feat-grid">
+          <div class="feat-card">
+            <div class="feat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+            </div>
+            <div class="feat-title">সুপার সফট ফেব্রিক</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="feat-title">হাইপো-অ্যালার্জেনিক</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <div class="feat-title">১০০% কালার গ্যারান্টি</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-sec lazy-section">
+      <div class="container sec-head">
+        <h3 class="sec-title">প্রোডাক্ট <span>গ্যালারী</span></h3>
+        <div class="divider"></div>
+        <p style="color:#64748B; margin-top:5px">ছবিগুলো স্লাইড করে দেখুন</p>
+      </div>
+      
+      <div class="gallery-track" id="galleryTrack">
+        <div class="g-card">
+          <img src="https://images.unsplash.com/photo-1611080775953-ce836a0fb4f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Fabric Zoom" loading="lazy" width="300" height="220" decoding="async">
+          <div class="g-badge">🔍 প্রিমিয়াম ফেব্রিক</div>
+        </div>
+        <div class="g-card">
+          <img src="https://images.unsplash.com/photo-1544979590-37e9b47eb705?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Baby Wrapped" loading="lazy" width="300" height="220" decoding="async">
+          <div class="g-badge">😴 শান্ত ঘুম</div>
+        </div>
+        <div class="g-card">
+          <img src="https://images.unsplash.com/photo-1584839843658-0050e8ed3e9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Full View" loading="lazy" width="300" height="220" decoding="async">
+          <div class="g-badge">🎨 সুন্দর কালার</div>
+        </div>
+        <div class="g-card">
+          <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Packaging" loading="lazy" width="300" height="220" decoding="async">
+          <div class="g-badge">🎁 গিফট প্যাকেজিং</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="form-sec lazy-section" id="orderForm">
+      <div class="container">
+        <div class="form-card">
+          <div class="sec-head">
+            <h2 class="sec-title">অর্ডার কনফার্ম করুন</h2>
+            <div class="divider"></div>
+            <p style="color:#64748B; margin-top:5px">নিচের ফর্মে আপনার ঠিকানা দিন</p>
+          </div>
+
+          <div class="timer">
+            ⚡ অফারটি শেষ হতে বাকি: <span id="timer" style="font-family:monospace; font-size:1.1rem">05:00:00</span>
+          </div>
+
+          <form id="checkoutForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ae571f10-7cc5-4c51-93ff-aa8b45c226cf">
+            
+            <div class="inp-grp">
+              <label class="lbl">আপনার নাম <span style="color:#E11D48">*</span></label>
+              <input type="text" name="name" id="name" class="inp" placeholder="সম্পূর্ণ নাম লিখুন" required>
+              <div class="err-msg">নাম আবশ্যক</div>
+            </div>
+
+            <div class="inp-grp">
+              <label class="lbl">মোবাইল নাম্বার <span style="color:#E11D48">*</span></label>
+              <input type="tel" name="phone" id="phone" class="inp" placeholder="01XXXXXXXXX" maxlength="11" inputmode="numeric" required>
+              <div class="err-msg">১১ ডিজিটের নাম্বার দিন</div>
+            </div>
+            
+            <div class="inp-grp">
+              <label class="lbl">সম্পূর্ণ ঠিকানা <span style="color:#E11D48">*</span></label>
+              <input type="text" name="address" id="address" class="inp" placeholder="বাসা নং, রোড, এলাকা..." required>
+              <div class="err-msg">ঠিকানা আবশ্যক</div>
+            </div>
+
+            <div class="inp-grp">
+              <label class="lbl">ইমেইল (অপশনাল)</label>
+              <input type="email" name="email" class="inp" placeholder="example@gmail.com">
+            </div>
+
+            <div class="inp-grp" style="margin-top:25px;">
+              <label class="lbl">রং পছন্দ করুন:</label>
+              <div class="color-grid">
+                <label class="c-opt">
+                  <input type="radio" name="color" value="Sky Blue" checked onclick="updatePreview('https://images.unsplash.com/photo-1584839843658-0050e8ed3e9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80', 'Sky Blue')">
+                  <span class="c-dot" style="background:#87CEEB"></span>
+                  <span class="c-name">Sky Blue</span>
+                </label>
+                <label class="c-opt">
+                  <input type="radio" name="color" value="Soft Pink" onclick="updatePreview('https://images.unsplash.com/photo-1544979590-37e9b47eb705?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80', 'Soft Pink')">
+                  <span class="c-dot" style="background:#FFB6C1"></span>
+                  <span class="c-name">Soft Pink</span>
+                </label>
+                <label class="c-opt">
+                  <input type="radio" name="color" value="Beige" onclick="updatePreview('https://images.unsplash.com/photo-1611080775953-ce836a0fb4f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80', 'Beige')">
+                  <span class="c-dot" style="background:#F5F5DC"></span>
+                  <span class="c-name">Beige</span>
+                </label>
+              </div>
+              
+              <div class="preview-box">
+                <span style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:white; font-size:0.7rem; padding:2px 8px; border-radius:4px" id="pLabel">Sky Blue</span>
+                <img id="previewImg" src="https://images.unsplash.com/photo-1584839843658-0050e8ed3e9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Preview" width="600" height="500">
+              </div>
+            </div>
+
+            <div class="inp-grp">
+              <label class="lbl">ডেলিভারি এরিয়া:</label>
+              <div class="ship-wrapper">
+                <label class="ship-card">
+                  <input type="radio" name="shipping" value="60" onchange="calcTotal()">
+                  <div class="ship-icon">🚚</div>
+                  <div class="ship-title">ঢাকা</div>
+                  <div class="ship-price">৳৬০</div>
+                </label>
+                <label class="ship-card">
+                  <input type="radio" name="shipping" value="120" checked onchange="calcTotal()">
+                  <div class="ship-icon">🚛</div>
+                  <div class="ship-title">বাইরে</div>
+                  <div class="ship-price">৳১২০</div>
+                </label>
+              </div>
+            </div>
+
+            <div class="bill-area">
+              <div class="bill-item">
+                <span>প্রোডাক্ট প্রাইস</span>
+                <span style="font-weight:600">৳৩৯৯</span>
+              </div>
+              <div class="bill-item">
+                <span>ডেলিভারি চার্জ</span>
+                <span id="shipFee" style="font-weight:600">৳১২০</span>
+              </div>
+              <div class="bill-item total">
+                <span class="total-label">সর্বমোট</span>
+                <span id="totalPrice" class="total-amount">৳৫১৯</span>
+              </div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-main" style="font-size:1.3rem; box-shadow: 0 10px 25px rgba(255,107,157,0.4);">
+              অর্ডার কনফার্ম করুন
+            </button>
+            
+            <div class="trust-badges">
+              <span>🚚 ফাস্ট ডেলিভারি</span> • <span>🛡️ ক্যাশ অন ডেলিভারি</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="rev-sec lazy-section">
+      <div class="container sec-head">
+        <h3 class="sec-title">প্যারেন্টসদের <span>ভালোবাসা ❤️</span></h3>
+        <div class="divider"></div>
+      </div>
+      <div class="rev-track">
+        <div class="rev-card">
+          <div class="u-head">
+            <div class="u-ava">S</div>
+            <div><h4 style="margin:0;font-size:0.95rem">সুমনা আক্তার</h4><span style="color:#10B981;font-size:0.75rem">✅ Verified</span></div>
+          </div>
+          <p style="font-size:0.9rem; color:#555; font-style:italic">"ব্ল্যাঙ্কেটটি খুবই নরম। আমার বাচ্চার ত্বকে কোনো সমস্যা হয়নি। এক কথায় অসাধারণ!"</p>
+          <div style="color:#F59E0B">★★★★★</div>
+        </div>
+        <div class="rev-card">
+          <div class="u-head">
+            <div class="u-ava" style="background:#DCFCE7; color:#166534">R</div>
+            <div><h4 style="margin:0;font-size:0.95rem">রাশেদ খান</h4><span style="color:#10B981;font-size:0.75rem">✅ Verified</span></div>
+          </div>
+          <p style="font-size:0.9rem; color:#555; font-style:italic">"অর্ডার করার ২ দিনের মধ্যেই পেয়েছি। যেমনটা ছবিতে দেখেছি ঠিক তেমনই প্রিমিয়াম।"</p>
+          <div style="color:#F59E0B">★★★★★</div>
+        </div>
+        <div class="rev-card">
+          <div class="u-head">
+            <div class="u-ava" style="background:#FEF9C3; color:#854D0E">N</div>
+            <div><h4 style="margin:0;font-size:0.95rem">নিশাত তানিয়া</h4><span style="color:#10B981;font-size:0.75rem">✅ Verified</span></div>
+          </div>
+          <p style="font-size:0.9rem; color:#555; font-style:italic">"কালারটা খুব সুন্দর। শীতে বাচ্চার জন্য খুবই আরামদায়ক হবে। ধন্যবাদ Glownest!"</p>
+          <div style="color:#F59E0B">★★★★☆</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-sec container lazy-section">
+      <div class="sec-head">
+        <h3 class="sec-title">সচরাচর <span>প্রশ্ন (FAQ)</span></h3>
+        <div class="divider"></div>
+      </div>
+      
+      <details open>
+        <summary>এটি কি নবজাতকের জন্য নিরাপদ?</summary>
+        <div class="ans">অবশ্যই! এটি ১০০% প্রিমিয়াম অর্গানিক কটন ও কেমিক্যাল-ফ্রি ফাইবার দিয়ে তৈরি। নবজাতকের সেনসিটিভ ত্বকের জন্য এটি সম্পূর্ণ নিরাপদ।</div>
+      </details>
+      <details>
+        <summary>ব্ল্যাঙ্কেটটি কি ওয়াশ করা যাবে?</summary>
+        <div class="ans">জি, এটি মেশিনে বা হাতে ধোয়া যাবে। আমরা গ্যারান্টি দিচ্ছি যে বারবার ধোয়ার পরেও এর রঙ এবং সফটনেস নতুনের মতোই থাকবে।</div>
+      </details>
+      <details>
+        <summary>অর্ডার করলে কতদিনে পাবো?</summary>
+        <div class="ans">ঢাকার ভিতরে ২৪-৪৮ ঘন্টা এবং ঢাকার বাইরে ২-৩ দিনের মধ্যে হোম ডেলিভারি পাবেন।</div>
+      </details>
+    </section>
+  </main>
+  
+    <footer class="footer lazy-section">
+    <div class="container">
+      <div class="f-grid">
+        <div>
+          <div class="f-brand">Glownest</div>
+          <span class="f-tag">আপনার সোনামণির জন্য সেরা মানের পণ্যের বিশ্বস্ত গন্তব্য।</span>
+          <div class="social-row">
+            <a href="https://www.facebook.com/profile.php?id=61569908571326" class="s-btn" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+            <a href="https://www.instagram.com/glownest.review/" class="s-btn" aria-label="Instagram"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path></svg></a>
+            <a href="https://wa.me/8801827664401" class="s-btn wa" aria-label="WhatsApp"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <div class="f-title">প্রয়োজনীয় লিংক</div>
+          <ul class="f-links">
+            <li><a href="#orderForm">অর্ডার করুন</a></li>
+            <li><a href="#">প্রাইভেসি পলিসি</a></li>
+            <li><a href="#">হ্যাপি রিটার্ন</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="f-title">যোগাযোগ</div>
+          <ul class="f-links">
+            <li>হেল্পলাইন : <a href="tel:01827664401"> 880 1827-664401</a></li>
+            <li>ইমেইল : <a href="mailto:glownestbd.shop@gmail.com"> support@glownest.shop</a></li>
+            <li><a href="#">ঢাকা, বাংলাদেশ</a></li>
+          </ul>
+        </div>
+      </div>
+     <div class="copy">
+   © 2025 Glownest.shop | Developed by 
+  <a href="https://sahitech.github.io/home/" class="dev-credit" target="_blank">SahiTech</a>
+</div>
+  </div>
+   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const PRICE = 399;
+      
+      // Auto Scroll Gallery
+      const track = document.getElementById('galleryTrack');
+      let scrollTimer;
+      const startScroll = () => {
+        scrollTimer = setInterval(() => {
+          if (track.scrollLeft >= (track.scrollWidth - track.clientWidth - 10)) {
+             track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+             track.scrollBy({ left: 300, behavior: 'smooth' }); 
+          }
+        }, 3000);
+      };
+      startScroll();
+      ['touchstart', 'mouseenter'].forEach(e => track.addEventListener(e, () => clearInterval(scrollTimer)));
+      ['touchend', 'mouseleave'].forEach(e => track.addEventListener(e, startScroll));
+
+      // Logic
+      const shipInputs = document.querySelectorAll('input[name="shipping"]');
+      const shipFeeEl = document.getElementById('shipFee');
+      const totalPriceEl = document.getElementById('totalPrice');
+      const previewImg = document.getElementById('previewImg');
+      const pLabel = document.getElementById('pLabel');
+
+      window.calcTotal = () => {
+        let shipping = 120;
+        shipInputs.forEach(input => { if(input.checked) shipping = parseInt(input.value); });
+        shipFeeEl.innerText = '৳' + shipping;
+        totalPriceEl.innerText = '৳' + (PRICE + shipping);
+      };
+
+      window.updatePreview = (url, name) => {
+        previewImg.style.opacity = 0.5;
+        setTimeout(() => {
+          previewImg.src = url;
+          pLabel.innerText = name;
+          previewImg.style.opacity = 1;
+        }, 200);
+      };
+
+      document.getElementById('phone').addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9]/g, '');
+      });
+
+      // Validation
+      const form = document.getElementById('checkoutForm');
+      form.addEventListener('submit', (e) => {
+        let isValid = true;
+        ['name', 'phone', 'address'].forEach(id => {
+          const el = document.getElementById(id);
+          const err = el.nextElementSibling;
+          if(el.value.trim().length < 3) {
+            el.classList.add('has-err'); err.style.display = 'block'; isValid = false;
+          } else {
+            el.classList.remove('has-err'); err.style.display = 'none';
+          }
+        });
+
+        if(document.getElementById('phone').value.length !== 11) {
+          const p = document.getElementById('phone');
+          p.classList.add('has-err'); p.nextElementSibling.style.display='block'; isValid=false;
+        }
+
+        if(!isValid) {
+          e.preventDefault();
+          document.querySelector('.has-err')?.scrollIntoView({behavior:'smooth', block:'center'});
+        } else {
+          document.getElementById('submitBtn').innerText = "অর্ডার প্রসেসিং...";
+        }
+      });
+
+      // Timer
+      let t = 18000; 
+      setInterval(() => {
+        let h = Math.floor(t/3600), m = Math.floor((t%3600)/60), s = t%60;
+        document.getElementById('timer').innerText = `${h<10?'0'+h:h}:${m<10?'0'+m:m}:${s<10?'0'+s:s}`;
+        t = t>0 ? t-1 : 18000;
+      }, 1000);
+
+      calcTotal(); 
+    });
+  </script>
+</body>
+</html>
